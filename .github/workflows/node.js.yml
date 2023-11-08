@@ -37,6 +37,8 @@ jobs:
     #- run: mv build/static/js  /home/ubuntu/uifiles
     #- run: mv build/static/css  /home/ubuntu/uifiles
 
+    - name: Build Docker Image
+      run: docker build -t helloworldreactimage .
     
 
 
