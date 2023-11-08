@@ -52,7 +52,7 @@ jobs:
     
     - name: Publish Docker Image to GitHub Repository
       run: |
-            docker push ghcr.io/Deepa-git-acc/helloworldreactimage
+            docker push ghcr.io/Deepa-git-acc/helloworldreactimage:latest
     
 
 
