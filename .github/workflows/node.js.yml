@@ -2,6 +2,10 @@
 # For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
 
 name: Node.js CI
+env:
+  GITHUB_REGISTRY: "ghcr.io"
+  GITHUB_OWNER: "Deepa-git-acc"
+  GITHUB_DOCKER_IMAGE: "helloworldreactimage"
 
 on:
   push:
@@ -38,6 +42,10 @@ jobs:
 
     - name: Build Docker Image
       run: docker build -t helloworldreactimage .
+    
+    - name: Publish Docker Image to GitHub Repository
+      run: |
+            docker push $GITHUB_REGISTRY/$GITHUB_OWNER/$GITHUB_DOCKER_IMAGE:latest
     
 
 
