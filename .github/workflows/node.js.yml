@@ -60,6 +60,7 @@ jobs:
       run: |
             docker push ghcr.io/deepa-git-acc/helloworldreactimage:latest
   deploy:
+    needs: build
     runs-on: [self-hosted, Server 1]    
     steps: 
       - name: Pulling Docker Image from Github RePository
