@@ -59,7 +59,10 @@ jobs:
       run: |
             docker push ghcr.io/deepa-git-acc/helloworldreactimage:latest
     
-
+    - name: Pushing Docker Image into Github RePo
+      run: |
+            echo $GHCR_PAT | docker login ghcr.io -u USERNAME --password-stdin
+            docker push ghcr.io/deepa-git-acc/helloworldreactimage:latest
 
 
 
