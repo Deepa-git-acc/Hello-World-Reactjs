@@ -61,7 +61,7 @@ jobs:
     
     - name: Pushing Docker Image into Github RePo
       run: |
-            echo $GHCR_PAT | docker login ghcr.io -u USERNAME --password-stdin
+            echo $GHCR_PAT | docker login ghcr.io -u deepa-git-acc --password-stdin
             docker push ghcr.io/deepa-git-acc/helloworldreactimage:latest
 
 
