@@ -65,7 +65,7 @@ jobs:
            # echo $GHCR_PAT | docker login ghcr.io -u Deepa-git-acc --password-stdin
            # echo ${{ secrets.GHCR_PAT }} | docker login ghcr.io -u Deepa-git-acc --password-stdin
             echo $PASSWORD | docker login ghcr.io -u Deepa-git-acc --password-stdin
-            docker push ghcr.io/deepa-git-acc/helloworldreactimage:latest
+            docker pull ghcr.io/deepa-git-acc/helloworldreactimage:latest
 
 
 
